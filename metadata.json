@@ -1,0 +1,6 @@
+{
+  "name": "MovieMind AI Pro",
+  "description": "An AI-powered movie recommendation platform with a machine learning engine, Groq LLM explanations, TMDB integration, mood matching, comparison, and an interactive assistant.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
