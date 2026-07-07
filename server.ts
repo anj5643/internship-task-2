@@ -5,7 +5,7 @@
 
 import express from 'express';
 import path from 'path';
-import { createServer as createViteServer } from 'vite';
+// Vite import removed to prevent Vercel bundling
 import dotenv from 'dotenv';
 import { rankRecommendations, MovieContent } from './src/lib/ml.js';
 
@@ -544,6 +544,8 @@ Structure the response strictly as a valid JSON object with the following schema
 
 async function startServer() {
   if (process.env.NODE_ENV !== 'production') {
+    const viteModuleName = 'vite';
+    const { createServer: createViteServer } = await import(viteModuleName);
     const vite = await createViteServer({
       server: { middlewareMode: true },
       appType: 'spa'
